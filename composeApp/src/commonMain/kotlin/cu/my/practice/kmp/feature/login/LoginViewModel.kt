@@ -2,7 +2,7 @@ package cu.my.practice.kmp.feature.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cu.my.practice.kmp.core.domain.AuthRemoteDataSource
+import cu.my.practice.kmp.core.domain.datasource.remote.AuthRemoteDataSource
 import cu.my.practice.kmp.core.model.ResultValue
 import cu.my.practice.kmp.core.network.response.dto.UserLoginRequest
 import cu.my.practice.kmp.feature.login.state.LoginState

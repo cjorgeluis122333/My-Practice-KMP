@@ -2,7 +2,7 @@ package cu.my.practice.kmp.feature.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cu.my.practice.kmp.core.domain.UserRemoteDatasource
+import cu.my.practice.kmp.core.domain.datasource.remote.UserRemoteDatasource
 import cu.my.practice.kmp.core.model.ResultValue
 import cu.my.practice.kmp.core.network.response.UserResponse
 import cu.my.practice.kmp.core.ui.Route
