@@ -3,7 +3,6 @@ package cu.my.practice.kmp.core.datastore
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import java.io.File
-import java.nio.file.Paths
 
 class DesktopDataStore {
     /*

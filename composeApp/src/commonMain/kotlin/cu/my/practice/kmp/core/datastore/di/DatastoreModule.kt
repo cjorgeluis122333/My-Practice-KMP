@@ -1,6 +1,5 @@
 package cu.my.practice.kmp.core.datastore.di
 
-import cu.my.practice.kmp.core.common.Context
 import cu.my.practice.kmp.core.datastore.datasource.AuthDatastoreImpl
 import cu.my.practice.kmp.core.domain.datasource.local.AuthDataStore
 import org.koin.core.module.Module
