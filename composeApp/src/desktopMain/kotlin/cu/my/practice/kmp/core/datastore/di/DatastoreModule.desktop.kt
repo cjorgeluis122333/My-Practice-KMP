@@ -6,6 +6,7 @@ import org.koin.dsl.module
 
 internal actual val platformDataStoreModule: Module
     get() = module {
-        single { DesktopDataStore().getDataStore()
+        single {
+            DesktopDataStore().createDataStore()
         }
     }

@@ -7,6 +7,6 @@ import org.koin.dsl.module
 internal actual val platformDataStoreModule: Module
     get() = module {
         single {
-            AndroidDataStore(get()).getDataStore()
+            AndroidDataStore(context = get()).getDataStore()
         }
     }

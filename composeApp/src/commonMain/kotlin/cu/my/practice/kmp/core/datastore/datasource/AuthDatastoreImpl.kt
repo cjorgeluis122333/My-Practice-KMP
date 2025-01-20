@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.firstOrNull
 class AuthDatastoreImpl(
     private val datastore: DataStore<Preferences>
 ) :AuthDataStore{
+
     object AuthKeys {
         val username: Preferences.Key<String> = stringPreferencesKey("username.datastore")
         val token = stringPreferencesKey("token.datastore")

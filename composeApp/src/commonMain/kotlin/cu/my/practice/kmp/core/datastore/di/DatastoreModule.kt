@@ -7,13 +7,14 @@ import org.koin.core.module.Module
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-fun datastoreModule(context: Context):Module = module{
-
-}
 
 
 val dataStoreModuleNotContext = module {
-single { AuthDatastoreImpl(get()) }.bind<AuthDataStore>()
-includes(platformDataStoreModule)
+    //Instances data store
+    includes(platformDataStoreModule)
+
+    // Data store services
+    single { AuthDatastoreImpl(get()) }.bind<AuthDataStore>()
+
 }
 internal expect val platformDataStoreModule: Module

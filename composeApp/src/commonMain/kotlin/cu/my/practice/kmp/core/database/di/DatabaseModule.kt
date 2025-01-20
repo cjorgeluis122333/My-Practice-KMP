@@ -8,6 +8,7 @@ import org.koin.dsl.module
 val databaseModule = module {
 
     //Here i provide the expect received for any platform
+    includes(databasePlatformModule)
     single { get<DatabaseFactory>().create()
         .setDriver(BundledSQLiteDriver())
         .build()

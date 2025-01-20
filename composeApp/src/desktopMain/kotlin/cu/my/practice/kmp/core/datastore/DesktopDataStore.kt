@@ -1,8 +1,12 @@
 package cu.my.practice.kmp.core.datastore
 
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import java.io.File
 import java.nio.file.Paths
 
 class DesktopDataStore {
+    /*
     fun getDataStore() = getDataStore(
         producePath = {
             val userHome = System.getProperty("user.home")
@@ -13,4 +17,17 @@ class DesktopDataStore {
             ).toString()
         }
     )
+*/
+
+    fun createDataStore(): DataStore<Preferences> {
+        val parentFolder = File(System.getProperty("user.dir"))
+        if (!parentFolder.exists()) {
+            parentFolder.mkdirs()
+        }
+        val preferencesPath = File(parentFolder, dataStoreFileName)
+        return getDataStore(
+            producePath = { preferencesPath.absolutePath }
+        )
+    }
+
 }
