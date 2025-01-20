@@ -1,4 +1,4 @@
-package cu.my.practice.kmp.exercite.day2
+package cu.my.practice.kmp.exercite.nowInAndroid.day2
 
 /*
 

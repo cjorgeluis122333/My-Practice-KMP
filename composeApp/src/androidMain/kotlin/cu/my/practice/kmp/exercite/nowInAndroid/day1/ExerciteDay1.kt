@@ -1,4 +1,4 @@
-package cu.my.practice.kmp.exercite.day1
+package cu.my.practice.kmp.exercite.nowInAndroid.day1
 
 import kotlin.math.abs
 

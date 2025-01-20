@@ -6,6 +6,7 @@ import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
 
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class DatabaseFactory() {
     actual fun create(): RoomDatabase.Builder<FavoriteBookDatabase> {
         val dbFile = documentDirectory() + "/${FavoriteBookDatabase.DB_NAME}"
