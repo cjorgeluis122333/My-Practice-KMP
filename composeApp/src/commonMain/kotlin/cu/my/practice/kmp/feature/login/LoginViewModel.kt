@@ -3,6 +3,7 @@ package cu.my.practice.kmp.feature.login
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cu.my.practice.kmp.core.domain.datasource.remote.AuthRemoteDataSource
+import cu.my.practice.kmp.core.domain.repository.AuthRepository
 import cu.my.practice.kmp.core.model.ResultValue
 import cu.my.practice.kmp.core.network.response.dto.UserLoginRequest
 import cu.my.practice.kmp.feature.login.state.LoginState
@@ -19,12 +20,35 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel(
     private val authRemoteDataSource: AuthRemoteDataSource,
+    private val authRepository: AuthRepository
 ) : ViewModel() {
     private val _state = MutableStateFlow(LoginState())
     val state = _state.asStateFlow()
 
     private val _onSussesLogin = MutableSharedFlow<SussesLogin>()
     val onSussesLogin: SharedFlow<SussesLogin> = _onSussesLogin.asSharedFlow()
+
+    init {
+        defaultValues()
+    }
+
+    private fun defaultValues() {
+        viewModelScope.launch {
+            stateHandler(
+                userName = authRepository.getUserName() ?: "",
+                password = authRepository.getToken() ?: ""
+            )
+        }
+    }
+
+    fun onLoginDelete() {
+        viewModelScope.launch {
+            authRepository.saveUserName(_state.value.username)
+            authRepository.saveToken(_state.value.password)
+        }
+    }
+
+
     fun onLogin() {
         stateHandler(
             isLoading = true,
@@ -33,12 +57,17 @@ class LoginViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             _state.value.let {
                 when (val result =
-                    authRemoteDataSource.postLogin(userLoginRequest = UserLoginRequest(it.username, it.password))
+                    authRemoteDataSource.postLogin(
+                        userLoginRequest = UserLoginRequest(
+                            it.username,
+                            it.password
+                        )
+                    )
                 ) {
                     is ResultValue.Error -> stateHandler(errorMessage = result.exception.message)
                     is ResultValue.Success<*> -> {
                         println("==========================================The login was susses")
-                    _onSussesLogin.emit(SussesLogin.Susses)
+                        _onSussesLogin.emit(SussesLogin.Susses)
                     }
                 }
             }

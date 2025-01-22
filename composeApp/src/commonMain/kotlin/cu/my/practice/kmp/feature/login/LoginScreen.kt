@@ -44,7 +44,7 @@ fun LoginScreen(
         Content(
             stateHandle = loginViewModel::stateHandler,
             state = state,
-            onLogin = loginViewModel::onLogin,
+            onLogin = loginViewModel::onLoginDelete,
         )
     }
 }

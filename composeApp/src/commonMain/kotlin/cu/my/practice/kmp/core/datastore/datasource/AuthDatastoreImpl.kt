@@ -25,7 +25,7 @@ class AuthDatastoreImpl(
 
     }
 
-    override  suspend fun getToken(): String? = datastore.data.firstOrNull()?.get(AuthKeys.username)
+    override  suspend fun getToken(): String? = datastore.data.firstOrNull()?.get(AuthKeys.token)
 
     override  suspend fun saveToken(value: String) {
         datastore.edit {

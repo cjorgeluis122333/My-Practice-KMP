@@ -8,4 +8,11 @@ import cu.my.practice.kmp.core.network.response.dto.UserLoginResponse
 interface AuthRepository {
     suspend fun postLogin(userToLogin: UserLoginRequest): ResultValue<UserLoginResponse>
     suspend fun postRegister(userToRegister: UserLoginRequest): ResultValue<UserResponse>
+
+
+    suspend fun getUserName(): String?
+    suspend fun getToken(): String?
+
+    suspend fun saveUserName(name:String)
+    suspend fun saveToken(token:String)
 }
