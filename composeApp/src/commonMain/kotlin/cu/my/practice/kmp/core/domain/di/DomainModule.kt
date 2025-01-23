@@ -2,9 +2,11 @@ package cu.my.practice.kmp.core.domain.di
 
 import cu.my.practice.kmp.core.domain.data.AdminRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.AuthRepositoryImpl
+import cu.my.practice.kmp.core.domain.data.HomeRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.UserRepositoryImpl
 import cu.my.practice.kmp.core.domain.repository.AdminRepository
 import cu.my.practice.kmp.core.domain.repository.AuthRepository
+import cu.my.practice.kmp.core.domain.repository.HomeRepository
 import cu.my.practice.kmp.core.domain.repository.UserRepository
 import cu.my.practice.kmp.core.domain.usecase.admin.DeleteUseCase
 import cu.my.practice.kmp.core.domain.usecase.admin.InsertUseCase
@@ -23,6 +25,7 @@ val domainModule = module {
     singleOf(::AdminRepositoryImpl).bind<AdminRepository>()
     singleOf(::AuthRepositoryImpl).bind<AuthRepository>()
     singleOf(::UserRepositoryImpl).bind<UserRepository>()
+    singleOf(::HomeRepositoryImpl).bind<HomeRepository>()
 
     //UseCase
     singleOf(::AuthUseCase)
