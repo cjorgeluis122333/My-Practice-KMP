@@ -30,6 +30,7 @@ class LoginViewModel(
     private val homeRepository: HomeRepository
 ) : ViewModel() {
     private val _state = MutableStateFlow(LoginState())
+
     val state = _state.onStart {
         defaultCacheValues()
         defaultDataBaseValues()
