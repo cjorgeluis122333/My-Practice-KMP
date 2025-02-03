@@ -20,6 +20,7 @@ fun countMatchesXMAS(): Int {
     println("======================== MAX COLUMN $maxColumn")
     println("======================== MAX COLUMN $maxRow")
 
+
     for (i in 0..<maxRow) {
 
         for (j in 0..<maxColumn) {
