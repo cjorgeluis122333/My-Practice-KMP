@@ -1,7 +1,6 @@
 package cu.my.practice.kmp.feature.home
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -102,70 +101,70 @@ fun HomeScreen(
     ) {
 
 
-        HomeContent(it)
+        HomeContent(it, navigateTo)
     }
 }
 
 @Composable
-fun HomeContent(paddingValues: PaddingValues) {
-    LazyColumn (
+fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
+    LazyColumn(
         modifier = Modifier
             .padding(paddingValues)
             .fillMaxSize(),
     ) {
-item {
+        item {
 
-    Card(modifier = Modifier.height(200.dp)) {
-        Button(
-            onClick = {},
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            shape = RoundedCornerShape(
-                20.dp
-            )
-        ) {
-            Text(text = "Paging 3")
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = { navigateTo(Route.Rick) },
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Paging 3")
+                }
+
+            }
+
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = { navigateTo(Route.Contact) },
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Room Database")
+                }
+
+            }
+
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = {},
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Ktor Network")
+                }
+            }//paging
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = {},
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Datastore")
+                }
+
+            }
+
         }
-
-    }
-
-    Card(modifier = Modifier.height(200.dp)) {
-        Button(
-            onClick = {},
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            shape = RoundedCornerShape(
-                20.dp
-            )
-        ) {
-            Text(text = "Room Database")
-        }
-
-    }
-
-    Card(modifier = Modifier.height(200.dp)) {
-        Button(
-            onClick = {},
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            shape = RoundedCornerShape(
-                20.dp
-            )
-        ) {
-            Text(text = "Ktor Network")
-        }
-    }//paging
-    Card(modifier = Modifier.height(200.dp)) {
-        Button(
-            onClick = {},
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            shape = RoundedCornerShape(
-                20.dp
-            )
-        ) {
-            Text(text = "Datastore")
-        }
-
-    }
-
-}
 
     }//End Column
 }

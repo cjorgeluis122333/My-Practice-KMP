@@ -3,10 +3,11 @@ package cu.my.practice.kmp.core.network.datasource
 import cu.my.practice.kmp.core.domain.datasource.remote.UserRemoteDatasource
 import cu.my.practice.kmp.core.model.ResultValue
 import cu.my.practice.kmp.core.network.response.UserResponse
+import cu.my.practice.kmp.core.network.service.user.UserService
 import cu.my.practice.kmp.core.network.service.user.UserServiceImp
 
 class UserRemoteDatasourceImplement(
-    private val userServiceImp: UserServiceImp,
+    private val userServiceImp: UserService,
 ) : RemoteDatasourceAbstraction(), UserRemoteDatasource {
 
     override suspend fun getAllUser(): ResultValue<List<UserResponse>> = safeApiCall {

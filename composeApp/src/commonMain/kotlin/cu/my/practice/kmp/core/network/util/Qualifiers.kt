@@ -4,3 +4,4 @@ import org.koin.core.qualifier.named
 
 val authQualifier = named("auth_service")
 val userQualifier = named("user_service")
+val networkQualifier = named("network_service")

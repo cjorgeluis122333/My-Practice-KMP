@@ -19,4 +19,12 @@ sealed interface Route {
     @Serializable
     data object Admin : Route
 
+    @Serializable
+    data object Contact : Route
+
+    @Serializable
+    data object Rick : Route
+
+    @Serializable
+    data object Splash: Route
 }

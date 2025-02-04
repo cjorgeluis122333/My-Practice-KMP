@@ -9,13 +9,14 @@ import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 
-class UserServiceImp(private val httpClient: HttpClient) {
-    suspend fun getAllUserFromMyBack(): List<UserResponse> {
+class UserServiceImp(private val httpClient: HttpClient):UserService {
+   override suspend fun getAllUserFromMyBack(): List<UserResponse> {
         return httpClient.get("/allUsers").body()
     }
 
-    suspend fun getUserById(id: Int): UserResponse {
+   override suspend fun getUserById(id: Int): UserResponse {
         return httpClient.get("/user$id").body()
     }
+
 
 }

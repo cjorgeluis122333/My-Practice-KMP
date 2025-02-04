@@ -5,10 +5,11 @@ import cu.my.practice.kmp.core.model.ResultValue
 import cu.my.practice.kmp.core.network.response.UserResponse
 import cu.my.practice.kmp.core.network.response.dto.UserLoginResponse
 import cu.my.practice.kmp.core.network.response.dto.UserLoginRequest
+import cu.my.practice.kmp.core.network.service.auth.AuthService
 import cu.my.practice.kmp.core.network.service.auth.AuthServiceImp
 
 class AuthRemoteDataSourceImpl(
-    private val authServiceImp: AuthServiceImp,
+    private val authServiceImp: AuthService,
 ) : AuthRemoteDataSource, RemoteDatasourceAbstraction() {
     override suspend fun postLogin(userLoginRequest: UserLoginRequest): ResultValue<UserLoginResponse> =
         safeApiCall {
