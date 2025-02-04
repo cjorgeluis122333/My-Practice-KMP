@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import cu.my.practice.kmp.core.model.user.UserModel
 import cu.my.practice.kmp.core.ui.Route
 import cu.my.practice.kmp.feature.login.state.LoginState
 import cu.my.practice.kmp.feature.login.state.SussesLogin
@@ -33,22 +32,24 @@ fun LoginScreen(
     loginViewModel: LoginViewModel = koinViewModel()
 ) {
     val state by loginViewModel.state.collectAsStateWithLifecycle()
-   // val allUsers by loginViewModel.allUsers.collectAsStateWithLifecycle()
+
     Scaffold {
+
+
         LaunchedEffect(key1 = loginViewModel.onSussesLogin) {
             loginViewModel.onSussesLogin.collectLatest {
                 when (it) {
-                    SussesLogin.Susses -> navigateTo(Route.Home)
+                    SussesLogin.Susses -> navigateTo(Route.Admin)
+                    SussesLogin.Failed -> navigateTo(Route.Home)
                 }
             }
         }
+
         Content(
             stateHandle = loginViewModel::stateHandler,
             state = state,
-            onLogin = loginViewModel::onLoginDelete,
-            onInsert = loginViewModel::insertUserToDatabase,
-          //  allUsers = allUsers
-
+            onLogin = loginViewModel::onLogin,
+            navigateTo = navigateTo
         )
     }
 }
@@ -58,8 +59,8 @@ private fun Content(
     stateHandle: (String, String) -> Unit,
     state: LoginState,
     onLogin: () -> Unit,
-    onInsert: () -> Unit,
-  //  allUsers: List<UserModel>
+    navigateTo: (Route) -> Unit
+    //  allUsers: List<UserModel>
 ) {
     Column {
         Spacer(modifier = Modifier.weight(1f))
@@ -102,9 +103,9 @@ private fun Content(
         Spacer(modifier = Modifier.height(8.dp))
 
         OutlinedButton(onClick = {
-            onInsert()
+            navigateTo(Route.Register)
         }, modifier = Modifier.fillMaxWidth().padding(16.dp)) {
-            Text("Insert in data base")
+            Text("Register")
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -115,11 +116,11 @@ private fun Content(
             Text(state.errorMessage ?: "", color = Color.Red)
 
         Spacer(modifier = Modifier.weight(1f))
-/*
-        for (i in 0..allUsers.size) {
-            Text(allUsers[i].name)
-        }
-*/
+        /*
+                for (i in 0..allUsers.size) {
+                    Text(allUsers[i].name)
+                }
+        */
     }
 
 }

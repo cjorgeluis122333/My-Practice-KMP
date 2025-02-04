@@ -3,11 +3,34 @@ package cu.my.practice.kmp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.BottomAppBar
+import androidx.compose.material.Button
+import androidx.compose.material.Card
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.Person
+import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.sharp.Info
+import androidx.compose.material.icons.sharp.Menu
+import androidx.compose.material.icons.sharp.Refresh
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import cu.my.practice.kmp.exercite.nowInAndroid.day1.Day1
+import androidx.compose.ui.unit.dp
 import cu.my.practice.kmp.exercite.nowInAndroid.day2.saySafeOreUnSafe
 import cu.my.practice.kmp.shared.App
 
@@ -24,15 +47,111 @@ class MainActivity : ComponentActivity() {
 
 @Preview
 @Composable
-fun AppAndroidPreview() {
-    val num: List<String> = listOf("2 4", "1 4", "1 4", "5 9", "4 5")
-    val d1 = Day1(num)
-    Column {
+fun ShowHome() {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                navigationIcon = {
+                    IconButton(onClick = {}) {
+                        Icon(imageVector = Icons.Sharp.Menu, contentDescription = null)
+                    }
+                },
+                title = { Text("Home") },
+                actions = {
 
-        Text("The result Range is " + d1.getDistance())
-        Text("The result Repetitions is" + d1.getRepetition())
+                    IconButton(onClick = {}) {
+                        Icon(imageVector = Icons.Sharp.Refresh, contentDescription = null)
+                    }
+                    IconButton(onClick = {}) {
+                        Icon(imageVector = Icons.Sharp.Info, contentDescription = null)
+                    }
+
+                }
+            )
+        },
+        bottomBar = {
+            BottomAppBar {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    IconButton(
+                        onClick = {},
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Person, contentDescription = null,
+                            modifier = Modifier
+                        )
+
+
+                    }
+                    IconButton(
+                        onClick = {},
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Home, contentDescription = null,
+                            modifier = Modifier
+
+                        )
+                    }
+                    IconButton(
+                        onClick = {},
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Settings, contentDescription = null,
+                            modifier = Modifier
+
+                        )
+                    }
+                }
+            }
+        }
+    ) {
+
+
+        Context(it)
     }
-//    Text("The result Range "+ getRangeBetweenTwoList())
-//    Text("The result Repetitions "+ getRepetitionsBetweenTwoList())
+}
 
+@Composable
+fun Context(paddingValues: PaddingValues) {
+    Column(
+        modifier = Modifier
+            .padding(paddingValues)
+            .fillMaxSize()
+    ) {
+        Card(modifier = Modifier.height(200.dp)) {
+              Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
+                  20.dp
+              )) {
+                  Text(text = "Paging 3")
+              }
+
+        }
+
+        Card(modifier = Modifier.height(200.dp)) {
+            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
+                20.dp
+            )) {
+                Text(text = "Room Database")
+            }
+
+        }
+
+        Card(modifier = Modifier.height(200.dp)) {
+            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
+                20.dp
+            )) {
+                Text(text = "Ktor Network")
+            }
+        }
+        Card(modifier = Modifier.height(200.dp)) {
+            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
+                20.dp
+            )) {
+                Text(text = "Datastore")
+            }
+
+        }
+    }
 }

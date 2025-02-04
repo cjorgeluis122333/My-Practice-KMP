@@ -16,4 +16,7 @@ sealed interface Route {
     @Serializable
     data object Graph : Route
 
+    @Serializable
+    data object Admin : Route
+
 }

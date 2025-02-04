@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import cu.my.practice.kmp.core.ui.Route
+import cu.my.practice.kmp.feature.admin.AdminViewModel
 import cu.my.practice.kmp.feature.home.HomeScreen
 import cu.my.practice.kmp.feature.home.HomeViewModel
 import cu.my.practice.kmp.feature.login.LoginScreen
@@ -47,13 +48,24 @@ fun App() {
                     val homeViewModel = koinViewModel<HomeViewModel>()
                     HomeScreen(
                         viewModel = homeViewModel,
-                        navigateTo = {route:Route-> navController.navigate(route) },
-                        navigateBack = { navController.popBackStack() }
+                        navigateTo = { route: Route -> navController.navigate(route) },
+                        logOut = {
+                            navController.navigate(Route.Login) {
+
+                                popUpTo<Route.Graph>() {
+                                    inclusive = true
+                                }
+                                launchSingleTop = true
+
+                            }
+                        }
 
                     )
                 }
 
-
+                composable<Route.Admin> {
+                    val adminViewModel = koinViewModel<AdminViewModel>()
+                }
             }
         }
 
