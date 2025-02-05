@@ -2,8 +2,10 @@ package cu.my.practice.kmp.core.database.di
 
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import cu.my.practice.kmp.core.database.DatabaseFactory
-import cu.my.practice.kmp.core.database.FavoriteBookDatabase
+import cu.my.practice.kmp.core.database.MyPracticeDatabase
+import cu.my.practice.kmp.core.database.datasource.ContactDataSourceImpl
 import cu.my.practice.kmp.core.database.datasource.UserLocalDatasourceImpl
+import cu.my.practice.kmp.core.domain.datasource.local.ContactDataSource
 import cu.my.practice.kmp.core.domain.datasource.local.UserLocalDatasource
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -22,13 +24,17 @@ val databaseModule = module {
     }
 
     //                      Provide the dao
-    single { get<FavoriteBookDatabase>().favoriteBookDao }
-    single { get<FavoriteBookDatabase>().userDao }
+    single { get<MyPracticeDatabase>().favoriteBookDao }
+    single { get<MyPracticeDatabase>().userDao }
+    single { get<MyPracticeDatabase>().contactDao }
 
     //                      Datasource
     singleOf(::UserLocalDatasourceImpl).bind<UserLocalDatasource>()
+    singleOf(::ContactDataSourceImpl).bind<ContactDataSource>()
+
     //Platform Modules
     includes(databasePlatformModule)
+
 }
 
 expect val databasePlatformModule: Module

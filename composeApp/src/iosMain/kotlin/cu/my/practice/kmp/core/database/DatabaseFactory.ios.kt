@@ -8,9 +8,9 @@ import platform.Foundation.NSUserDomainMask
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class DatabaseFactory() {
-    actual fun create(): RoomDatabase.Builder<FavoriteBookDatabase> {
-        val dbFile = documentDirectory() + "/${FavoriteBookDatabase.DB_NAME}"
-        return Room.databaseBuilder<FavoriteBookDatabase>(
+    actual fun create(): RoomDatabase.Builder<MyPracticeDatabase> {
+        val dbFile = documentDirectory() + "/${MyPracticeDatabase.DB_NAME}"
+        return Room.databaseBuilder<MyPracticeDatabase>(
             name = dbFile
         )
     }

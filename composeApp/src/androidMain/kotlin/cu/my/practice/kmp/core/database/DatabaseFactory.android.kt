@@ -6,9 +6,9 @@ import androidx.room.RoomDatabase
 
 @Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 actual class DatabaseFactory(private val context: Context) {
-    actual fun create(): RoomDatabase.Builder<FavoriteBookDatabase> {
+    actual fun create(): RoomDatabase.Builder<MyPracticeDatabase> {
         val appContext = context.applicationContext
-        val dbFile = appContext.getDatabasePath(FavoriteBookDatabase.DB_NAME)
+        val dbFile = appContext.getDatabasePath(MyPracticeDatabase.DB_NAME)
 
         return Room.databaseBuilder(
             context = appContext,

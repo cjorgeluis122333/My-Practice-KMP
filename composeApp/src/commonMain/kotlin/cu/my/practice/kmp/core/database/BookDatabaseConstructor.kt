@@ -5,6 +5,6 @@ package cu.my.practice.kmp.core.database
 import androidx.room.RoomDatabaseConstructor
 
 @Suppress("NO_ACTUAL_FOR_EXPECT")
-expect object BookDatabaseConstructor: RoomDatabaseConstructor<FavoriteBookDatabase> {
-    override fun initialize(): FavoriteBookDatabase
+expect object BookDatabaseConstructor: RoomDatabaseConstructor<MyPracticeDatabase> {
+    override fun initialize(): MyPracticeDatabase
 }
