@@ -11,7 +11,7 @@ class RickServiceImpl(
 ) : RickService {
 
    override suspend fun getCharacters(page: Int): CharacterWrapper =
-        client.get("rickandmortyapi.com/api/character/") {
+        client.get("http://rickandmortyapi.com/api/character/") {
             parameter("page", page)
         }.body()
 

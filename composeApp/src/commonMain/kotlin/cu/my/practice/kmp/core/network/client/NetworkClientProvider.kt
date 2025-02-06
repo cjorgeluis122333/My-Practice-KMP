@@ -1,16 +1,12 @@
 package cu.my.practice.kmp.core.network.client
 
 import cu.my.practice.kmp.core.network.util.CONNECTION_NETWORK_TIMEOUT
-import cu.my.practice.kmp.core.network.util.CONNECTION_TIMEOUT
-import cu.my.practice.kmp.core.network.util.MY_SERVER_BASE_URL
 import io.ktor.client.HttpClient
-import io.ktor.client.plugins.DefaultRequest
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
-import io.ktor.http.URLProtocol
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
@@ -46,11 +42,11 @@ object NetworkClientProvider {
                 }
             }
 
-            install(DefaultRequest){
-                url {
-                    protocol = URLProtocol.HTTPS
-                }
-            }
+//            install(DefaultRequest) {
+//                url {
+//                    protocol = URLProtocol.HTTPS
+//                }
+//            }
         }
     }
 }

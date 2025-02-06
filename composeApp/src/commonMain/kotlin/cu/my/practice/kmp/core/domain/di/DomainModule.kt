@@ -2,11 +2,13 @@ package cu.my.practice.kmp.core.domain.di
 
 import cu.my.practice.kmp.core.domain.data.AdminRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.AuthRepositoryImpl
+import cu.my.practice.kmp.core.domain.data.CharacterRepositoryImplement
 import cu.my.practice.kmp.core.domain.data.ContactRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.HomeRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.UserRepositoryImpl
 import cu.my.practice.kmp.core.domain.repository.AdminRepository
 import cu.my.practice.kmp.core.domain.repository.AuthRepository
+import cu.my.practice.kmp.core.domain.repository.CharacterRepository
 import cu.my.practice.kmp.core.domain.repository.ContactRepository
 import cu.my.practice.kmp.core.domain.repository.HomeRepository
 import cu.my.practice.kmp.core.domain.repository.UserRepository
@@ -16,6 +18,7 @@ import cu.my.practice.kmp.core.domain.usecase.admin.UpdateUseCase
 import cu.my.practice.kmp.core.domain.usecase.auth.AuthUseCase
 import cu.my.practice.kmp.core.domain.usecase.auth.LoginUseCase
 import cu.my.practice.kmp.core.domain.usecase.auth.RegisterUseCase
+import cu.my.practice.kmp.core.domain.usecase.character.GetCharactersUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.ContactUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.DeleteContactUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.InsertContactUsesCase
@@ -38,6 +41,7 @@ val domainModule = module {
     singleOf(::UserRepositoryImpl).bind<UserRepository>()
     singleOf(::HomeRepositoryImpl).bind<HomeRepository>()
     singleOf(::ContactRepositoryImpl).bind<ContactRepository>()
+    singleOf(::CharacterRepositoryImplement).bind<CharacterRepository>()
 
     // ==============================================         UseCase
     //Auth
@@ -62,5 +66,6 @@ val domainModule = module {
     singleOf(::FindAllUserUseCase)
     singleOf(::FindUserByUsernameUseCase)
 
-
+    //Character
+    singleOf(::GetCharactersUsesCase)
 }

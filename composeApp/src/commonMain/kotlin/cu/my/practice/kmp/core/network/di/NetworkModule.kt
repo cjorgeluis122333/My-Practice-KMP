@@ -9,6 +9,7 @@ import cu.my.practice.kmp.core.network.client.UserClientProvider
 import cu.my.practice.kmp.core.network.datasource.AuthRemoteDataSourceImpl
 import cu.my.practice.kmp.core.network.datasource.RickRemoteDataSourceImpl
 import cu.my.practice.kmp.core.network.datasource.UserRemoteDatasourceImplement
+import cu.my.practice.kmp.core.network.filter.CharacterPagingUsesCase
 import cu.my.practice.kmp.core.network.service.auth.AuthService
 import cu.my.practice.kmp.core.network.service.auth.AuthServiceImp
 import cu.my.practice.kmp.core.network.service.network.RickService
@@ -33,6 +34,9 @@ val networkModule = module {
     single { UserServiceImp(get(userQualifier)) }.bind<UserService>()
     single { AuthServiceImp(get(authQualifier)) }.bind<AuthService>()
     single { RickServiceImpl(get(networkQualifier)) }.bind<RickService>()
+
+    //Paging
+    single { CharacterPagingUsesCase(get()) }
 
     //Datasource
     singleOf(::UserRemoteDatasourceImplement).bind<UserRemoteDatasource>()

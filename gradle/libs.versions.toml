@@ -33,8 +33,10 @@ moko-permissions = "0.18.1"
 playServicesLocation = "21.3.0"
 #Data Store
 android-datastore = "1.1.2"
-#Paggin
-androidx-paging = "3.3.5"
+
+
+paging  = "3.3.0-alpha02-0.5.1"
+paging-androidx = "3.3.5"
 #kotlin serialization
 kotlinSerialization = "1.7.3"
 
@@ -117,11 +119,17 @@ moko-permissions-compose = { group = "dev.icerock.moko", name = "permissions-com
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 #paging
-androidx-paging-common = { module = "androidx.paging:paging-common", version.ref = "androidx-paging" }
-androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "androidx-paging" }
-androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "androidx-paging" }
-androidx-paging-testing = { module = "androidx.paging:paging-testing", version.ref = "androidx-paging" }
+#androidx-paging-common = { module = "androidx.paging:paging-common", version.ref = "androidx-paging" }
+#androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "androidx-paging" }
+#androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "androidx-paging" }
+#androidx-paging-testing = { module = "androidx.paging:paging-testing", version.ref = "androidx-paging" }
 
+paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging" }
+paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "paging" }
+paging-runtime-uikit = { module = "app.cash.paging:paging-runtime-uikit", version.ref = "paging" }
+paging-testing = { module = "app.cash.paging:paging-testing", version.ref = "paging" }
+
+paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "paging-androidx" }
 
 #implementation("app.cash.paging:paging-compose-common:3.3.0-alpha02-0.4.0")
 #implementation("app.cash.paging:paging-common:3.3.0-alpha02-0.4.0")
