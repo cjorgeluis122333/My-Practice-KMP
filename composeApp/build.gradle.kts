@@ -1,5 +1,4 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -45,15 +44,18 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-
+            //Koin
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
+            //Ktor
             implementation(libs.ktor.client.okhttp)
+            //Paging
+            implementation(libs.paging.runtime) // Android Paging Runtime
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -62,27 +64,29 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.navigation.compose)
 
-           //Room
+            //Room
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.androidx.room.runtime)
             implementation(libs.sqlite.bundled)
 
-           //Koin
+            //Koin
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
-           //Ktor
+            //Ktor
             implementation(libs.bundles.ktor)
             //Coil
             implementation(libs.bundles.coil)
 
-
             //Datastore
             implementation(libs.androidx.datastore.preferences)
             implementation(libs.androidx.datastore.proto)
-            //
+            //Kotlin Serialization
             implementation(libs.kotlinx.serialization.json)
-
+            //Paging 3 (Port)
+            implementation(libs.paging.common)
+            implementation(libs.paging.compose.common)
+            implementation(libs.paging.testing)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -92,6 +96,8 @@ kotlin {
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin.ios)
+            //Paging 3 (Port)
+            implementation(libs.paging.runtime.uikit) // iOS Paging Runtime
         }
 
         dependencies {
