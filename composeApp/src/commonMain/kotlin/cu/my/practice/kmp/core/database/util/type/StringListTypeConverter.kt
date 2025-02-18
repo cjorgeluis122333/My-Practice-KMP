@@ -1,4 +1,4 @@
-package cu.my.practice.kmp.core.database.util
+package cu.my.practice.kmp.core.database.util.type
 
 import androidx.room.TypeConverter
 import kotlinx.serialization.encodeToString

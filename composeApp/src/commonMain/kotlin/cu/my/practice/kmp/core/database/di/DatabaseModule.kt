@@ -4,8 +4,10 @@ import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import cu.my.practice.kmp.core.database.DatabaseFactory
 import cu.my.practice.kmp.core.database.MyPracticeDatabase
 import cu.my.practice.kmp.core.database.datasource.ContactDataSourceImpl
+import cu.my.practice.kmp.core.database.datasource.PictureDataSourceImplement
 import cu.my.practice.kmp.core.database.datasource.UserLocalDatasourceImpl
 import cu.my.practice.kmp.core.domain.datasource.local.ContactDataSource
+import cu.my.practice.kmp.core.domain.datasource.local.PictureDataSource
 import cu.my.practice.kmp.core.domain.datasource.local.UserLocalDatasource
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -27,11 +29,12 @@ val databaseModule = module {
     single { get<MyPracticeDatabase>().favoriteBookDao }
     single { get<MyPracticeDatabase>().userDao }
     single { get<MyPracticeDatabase>().contactDao }
+    single { get<MyPracticeDatabase>().pictureDao }
 
     //                      Datasource
     singleOf(::UserLocalDatasourceImpl).bind<UserLocalDatasource>()
     singleOf(::ContactDataSourceImpl).bind<ContactDataSource>()
-
+    singleOf(::PictureDataSourceImplement).bind<PictureDataSource>()
     //Platform Modules
     includes(databasePlatformModule)
 

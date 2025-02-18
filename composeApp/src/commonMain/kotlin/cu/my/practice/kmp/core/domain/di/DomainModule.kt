@@ -5,12 +5,14 @@ import cu.my.practice.kmp.core.domain.data.AuthRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.CharacterRepositoryImplement
 import cu.my.practice.kmp.core.domain.data.ContactRepositoryImpl
 import cu.my.practice.kmp.core.domain.data.HomeRepositoryImpl
+import cu.my.practice.kmp.core.domain.data.PictureRepositoryImplement
 import cu.my.practice.kmp.core.domain.data.UserRepositoryImpl
 import cu.my.practice.kmp.core.domain.repository.AdminRepository
 import cu.my.practice.kmp.core.domain.repository.AuthRepository
 import cu.my.practice.kmp.core.domain.repository.CharacterRepository
 import cu.my.practice.kmp.core.domain.repository.ContactRepository
 import cu.my.practice.kmp.core.domain.repository.HomeRepository
+import cu.my.practice.kmp.core.domain.repository.PictureRepository
 import cu.my.practice.kmp.core.domain.repository.UserRepository
 import cu.my.practice.kmp.core.domain.usecase.admin.DeleteUseCase
 import cu.my.practice.kmp.core.domain.usecase.admin.InsertUseCase
@@ -25,6 +27,9 @@ import cu.my.practice.kmp.core.domain.usecase.contact.InsertContactUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.SelectAllContactsUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.SelectContactLikeConditionUsesCase
 import cu.my.practice.kmp.core.domain.usecase.contact.UpdateContactUsesCase
+import cu.my.practice.kmp.core.domain.usecase.pictures.DeletePictureUsesCase
+import cu.my.practice.kmp.core.domain.usecase.pictures.InsertPictureUsesCase
+import cu.my.practice.kmp.core.domain.usecase.pictures.SelectPictureUsesCase
 import cu.my.practice.kmp.core.domain.usecase.user.FindAllUserUseCase
 import cu.my.practice.kmp.core.domain.usecase.user.FindUserByUsernameUseCase
 import org.koin.core.module.dsl.singleOf
@@ -42,8 +47,10 @@ val domainModule = module {
     singleOf(::HomeRepositoryImpl).bind<HomeRepository>()
     singleOf(::ContactRepositoryImpl).bind<ContactRepository>()
     singleOf(::CharacterRepositoryImplement).bind<CharacterRepository>()
+    singleOf(::PictureRepositoryImplement).bind<PictureRepository>()
 
     // ==============================================         UseCase
+
     //Auth
     singleOf(::AuthUseCase)
     singleOf(::LoginUseCase)
@@ -68,4 +75,10 @@ val domainModule = module {
 
     //Character
     singleOf(::GetCharactersUsesCase)
+
+    //Pictures
+    singleOf(::SelectPictureUsesCase)
+    singleOf(::DeletePictureUsesCase)
+    singleOf(::InsertPictureUsesCase)
+
 }

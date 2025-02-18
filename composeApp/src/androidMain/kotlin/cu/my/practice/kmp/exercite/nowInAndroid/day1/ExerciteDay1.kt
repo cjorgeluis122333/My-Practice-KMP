@@ -10,7 +10,7 @@ fun getRangeBetweenTwoList(): Int {
     val (left, right) = list.map {
         val l = it[0].toInt()
         val r = it[1].toInt()
-        l to r //You uses the to when you want return the value of the two list
+        l to r //You uses the to when you want return the values of the two list
     }
         .unzip() //When you work whit two list they are a Pair. UNZIP() quite the pair and let in her type
 
@@ -30,7 +30,7 @@ fun getRepetitionsBetweenTwoList(): Int {
     val (left, right) = list.map {
         val l = it[0].toInt()
         val r = it[1].toInt()
-        l to r //You uses the to when you want return the value of the two list
+        l to r //You uses the to when you want return the values of the two list
     }
         .unzip() //When you work whit two list they are a Pair. UNZIP() quite the pair and let in her type
 

@@ -26,5 +26,8 @@ sealed interface Route {
     data object Rick : Route
 
     @Serializable
-    data object Splash: Route
+    data object Splash : Route
+
+    @Serializable
+    data object Gallery : Route
 }

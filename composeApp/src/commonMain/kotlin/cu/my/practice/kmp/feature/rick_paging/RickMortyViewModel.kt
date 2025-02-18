@@ -34,7 +34,7 @@ class RickMortyViewModel(
 
 //Actions
 private fun getReserves() = viewModelScope.launch {
-reserves = fetchPlanService(filterData.value).cachedIn(viewModelScope)
+reserves = fetchPlanService(filterData.values).cachedIn(viewModelScope)
 }
 
     * */

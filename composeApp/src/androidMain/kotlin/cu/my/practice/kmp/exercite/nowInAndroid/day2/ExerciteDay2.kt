@@ -43,36 +43,36 @@ fun saySafeOreUnSafe() {
         i.onEach { j ->
             if (cont > 0 && j > first) { // first less than second
                 if ((first + 3) < j) {
-                    println("Unsafe the value $first is more big than 3 of $j")
+                    println("Unsafe the values $first is more big than 3 of $j")
                     isSafe = false
                 }
                 if (first == j) {
-                    println("Unsafe the value $first == $j")
+                    println("Unsafe the values $first == $j")
                     isSafe = false
                 }
                 if (isAscend == false) {
-                    println("Unsafe the value because change the increasing flow with this value")
+                    println("Unsafe the values because change the increasing flow with this values")
                     isSafe = false
 
                 }
                 isAscend = true
             } else if (cont > 0 && j < first) { // first bigger than second
                 if ((first - 2) > j) {
-                    println("Unsafe the value $first is more big than 2 of $j")
+                    println("Unsafe the values $first is more big than 2 of $j")
                     isSafe = false
                 }
                 if (first == j) {
-                    println("Unsafe the value $first == $j")
+                    println("Unsafe the values $first == $j")
                     isSafe = false
 
                 }
                 if (isAscend == true) {
-                    println("Unsafe the value because change the decreasing flow with this value")
+                    println("Unsafe the values because change the decreasing flow with this values")
                     isSafe = false
                 }
                 isAscend = false
             } else if (cont > 0 && j == first) {
-                println("Unsafe the value $first == $j")
+                println("Unsafe the values $first == $j")
                 isSafe = false
             }
 

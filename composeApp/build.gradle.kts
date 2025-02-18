@@ -53,12 +53,17 @@ kotlin {
             implementation(libs.paging.runtime) // Android Paging Runtime
         }
         commonMain.dependencies {
+            //UI
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            //Coil
+            implementation(libs.bundles.coil)
+            implementation(libs.compose.shimmer)
+
 
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
@@ -75,8 +80,6 @@ kotlin {
             api(libs.koin.core)
             //Ktor
             implementation(libs.bundles.ktor)
-            //Coil
-            implementation(libs.bundles.coil)
 
             //Datastore
             implementation(libs.androidx.datastore.preferences)

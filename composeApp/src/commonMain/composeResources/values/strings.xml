@@ -1,0 +1,608 @@
+<resources>
+
+    <string name="email_support" translatable="false">ticket@xetid.cu</string>
+    <string name="app_name" translatable="false">Ticket</string>
+
+    <string name="ups" translatable="false">Ups!!</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="base_continue">Continue</string>
+    <string name="with">with</string>
+    <string name="are_you_not_signin">Are you not sign in?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="password_forgotten">Have you forgotten the password?</string>
+
+    <!--Greetings-->
+    <string name="greeting_morning_1">Good morning</string>
+    <string name="greeting_morning_2">Good morning</string>
+    <string name="greeting_afternoon_1">Good afternoon</string>
+    <string name="greeting_night_1">Good night</string>
+    <string name="greeting_1">Greetings</string>
+    <string name="greeting_2">Welcome</string>
+    <string name="greeting_3">Hello</string>
+    <string name="greeting_4">Nice to see you</string>
+    <string name="greeting_5">Hi, welcome back</string>
+
+    <string name="required_field">Required field</string>
+    <string name="invalid_email">Your email is not valid!</string>
+    <string name="understood">Understood</string>
+    <string name="error">Error</string>
+    <string name="profile_error">An error occurred when obtaining your profile data on the platform. You must log in again.</string>
+    <string name="recovery">Recovery</string>
+    <string name="start_population_fatal_error">A fatal error has occurred from which there is no recovery. We recommend reinstalling the application.</string>
+    <string name="password_recovery_msg">You have been sent an email with the necessary information for the recovery of your account. Once the process is complete, you will be able to login with your credentials.</string>
+    <string name="send">Send</string>
+    <string name="need_permissions_title">Necessary permissions</string>
+    <string name="need_permissions_text">For the correct operation of the application, it is necessary to grant permanent location permissions and phone management permission. Go to Permissions>Location>Always Allow and Permissions>Phone>Allow</string>
+    <string name="need_permissions_action">Grant permissions</string>
+    <string name="password_recovery_ask">Enter your email to continue with the recovery of your account.</string>
+    <string name="password_length_error">Your password must be at least 8 characters long.</string>
+    <string name="link_account">Link Account</string>
+    <string name="link">Link</string>
+    <string name="link_account_msg">Enter your Ticket credentials to associate your account</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_text">Welcome to the Ticket platform. You can now enjoy our services.</string>
+    <string name="register">Register</string>
+    <string name="register_ez_error">An error occurred while registering a new user. Since you already have a Ticket platform account, you must link to it.</string>
+    <string name="accept">Accept</string>
+    <string name="account">Account</string>
+    <string name="valid_user_msg">Your username has been validated</string>
+    <string name="ask_about_ticket_account">Your username has been validated. Do you have a Ticket account or want to create a new one automatically?</string>
+    <string name="account_not_found_msg">Could not get your Ticket account details. Try again.</string>
+    <string name="create_account">Create account</string>
+    <string name="link_account_success_msg">Your account has been successfully linked.</string>
+    <string name="home">Home</string>
+    <string name="tickets">Tickets</string>
+    <string name="pre_bookings">Pre-bookings</string>
+    <string name="waiting_room">Waiting room</string>
+    <string name="waiting_rooms">Waiting rooms</string>
+    <string name="history">History</string>
+    <string name="subscription">Subscription</string>
+    <string name="about_us">About us</string>
+    <string name="settings">Settings</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="support">Support</string>
+    <string name="session_init">Session Init</string>
+    <string name="invited_user">Invited User</string>
+    <string name="profile">Profile</string>
+    <string name="professional_profile">Professional profile</string>
+    <string name="close_session">Close session</string>
+    <string name="close">Close</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_description">Background update interval.</string>
+    <string name="calendar">Calendar</string>
+    <string name="remember">Remember</string>
+    <string name="events_description">Add events to system calendar for a better integration.</string>
+    <string name="ask">Ask</string>
+    <string name="security">Security</string>
+    <string name="remember_login_description">Remember credentials at startup. Authentication will be requested only when your session expires.</string>
+    <string name="data_consuming">Data consuming</string>
+    <string name="base_notify_service">Notifications Service</string>
+    <string name="base_notify_service_summary">Enable notifications service.</string>
+    <string name="auto_load_image">Load images automatically</string>
+    <string name="default_empty_description">There are no items to display.</string>
+    <string name="cancel">Cancel</string>
+    <string name="buy_plan">Buy Subscription Plan</string>
+    <string name="operations_history">Trading History</string>
+    <string name="buy">Buy</string>
+    <string name="recharge">Recharge</string>
+    <string name="transfer_action">Transfer</string>
+    <string name="pay_action">Pay</string>
+    <string name="another_action">Another action</string>
+    <string name="verify_payment">Verify payment</string>
+    <string name="share">Share</string>
+    <string name="payment_canceled">The payment has been canceled, so you can\'t continue.</string>
+    <string name="rate">Rate</string>
+    <string name="share_your_opinion">Share your opinion</string>
+    <string name="comment">Comment</string>
+    <string name="version">Version</string>
+    <string name="whole_information">Developed by XETID in collaboration with the Central University \"Marta Abreu\" of Las Villas.Ticket: Cuba\'s central reservation system, which allows to manage online reservations of services belonging to state, cooperative, private or mixed sector entities, through its service catalog.
+Among its main functionalities is the reservation in the days and shifts of preference for the user according to the existing availabilities, in case there is no availability, the waiting room can be used as another functionality within Ticket. Payment of the service through secure platforms (ENZONA). Possibility of booking for different beneficiaries. Cancellation of tickets and obtaining the amount paid according to the terms and conditions of each provider. Synchronize reservations with the phone calendar, as well as receive notifications from the system and rate the services received.</string>
+    <string name="change_log">Changelog</string>
+    <string name="give_us_opinion">Give us opinion</string>
+
+    <!-- Professional Profile Errors -->
+    <string name="error_max_limit_data">The maximum number of data that can be added has been reached</string>
+
+
+    <!-- Notification -->
+    <string name="base_notifications_service">Notifications Service</string>
+    <string name="base_notifications_default">Notifications of Ticket</string>
+    <string name="base_notifications_service_description">Allows the execution of the notification service in real time</string>
+    <string name="base_publicity">Publicity</string>
+    <string name="base_suggestion">Suggestion</string>
+    <string name="description_unavailable">Description unavailable</string>
+    <string name="base_info">Information</string>
+    <string name="base_notification">Notification</string>
+    <string name="notification">Notifications</string>
+    <string name="base_confirmation">Confirmation</string>
+    <string name="base_alert">Alert</string>
+    <string name="base_link">Link</string>
+    <string name="base_service">Service</string>
+    <string name="base_new_type">News</string>
+    <string name="base_warning">Warning</string>
+    <string name="base_notifications">Notifications</string>
+    <string name="base_open">Open</string>
+    <string name="base_no_notifications_to_show">There are no notifications to display</string>
+    <string name="base_mark_all_as_read">Mark all as read</string>
+    <string name="register_account_msg">We are setting up your account. This process can take a few minutes. Please wait while we prepare everything for you.</string>
+
+    <!-- Notification Filters -->
+    <string name="notification_filter_new">New</string>
+    <string name="notification_filter_read">Read</string>
+    <string name="notification_filter_all">All</string>
+
+    <!-- EzLogin Loading Messages -->
+    <string name="loading_ez_web">Preparing login…</string>
+    <string name="loading_ez_data">Loading data…</string>
+    <string name="registering_ticket_user">Registering User</string>
+
+    <!-- Register Messages -->
+    <string name="registered">Registered</string>
+    <string name="registered_successfully_msg">Before logging in, please confirm the email with the link we have sent you to complete the verification of your account.</string>
+    <string name="register_error_msg">An error occurred while registering a new user. Check your data, your connection and try again.</string>
+    <string name="register_loading">Registering.</string>
+
+    <string name="base_app_no_found">There is no application available to perform the action.</string>
+    <string name="follow_us">Follow us</string>
+    <string name="change_password">Change password</string>
+    <string name="create_professional_profile">Create professional profile</string>
+    <string name="base_create">Create</string>
+    <string name="name">Name</string>
+    <string name="lastname">Lastname</string>
+    <string name="dni">Identity Card</string>
+    <string name="phone">Phone</string>
+    <string name="gender">Gender</string>
+    <string name="address">Address</string>
+    <string name="position">Position</string>
+    <string name="turn">Turn</string>
+    <string name="capacity">Capacity</string>
+    <string name="capacities">Capacities</string>
+    <string name="address_required">To create a professional profile, it is necessary to enter your address.</string>
+
+    <string name="location_service_disabled">Location service has stopped.</string>
+    <string name="location_service_starter">Location service has started.</string>
+    <string name="notification_service_starter">Notifications service has started.</string>
+    <string name="notification_service_disabled">Notifications service has stopped.</string>
+
+    <!--    Social Media -->
+    <string name="social_media_twitter_x" translatable="false">X</string>
+    <string name="social_media_twitter" translatable="false">Twitter</string>
+    <string name="social_media_telegram" translatable="false">Telegram</string>
+    <string name="social_media_facebook" translatable="false">Facebook</string>
+    <string name="social_media_whatsapp" translatable="false">Whatsapp</string>
+    <string name="social_media_instagram" translatable="false">Instagram</string>
+    <string name="social_media_youtube" translatable="false">Youtube</string>
+    <string name="social_media_linkedin" translatable="false">LinkedIn</string>
+    <string name="social_media_pinterest" translatable="false">Pinterest</string>
+
+    <!-- Day Selector Rules   -->
+    <string name="transfermovil" translatable="false">Transfermóvil</string>
+
+    <!-- Day Selector Rules   -->
+    <string name="start_of">Start of</string>
+    <string name="day_at">Day at</string>
+    <string name="to_day">To day</string>
+    <string name="date_range">Date range</string>
+    <string name="all_date_except">For everyone except</string>
+    <string name="only_this_days">Only for</string>
+    <string name="for_intervals_days">Repeat each</string>
+
+    <!--    Days Of Week -->
+    <string name="days_of_week">Days of Week</string>
+    <string name="monday">MONDAY</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="friday">FRIDAY</string>
+    <string name="saturday">SATURDAY</string>
+    <string name="sunday">SUNDAY</string>
+
+    <!-- Intervals in the Year  -->
+    <string name="never">Never</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+    <string name="none">Nine</string>
+    <string name="day">Day</string>
+    <string name="days">Days</string>
+    <string name="week">Week</string>
+    <string name="weeks">Weeks</string>
+    <string name="fortnight">Fortnight</string>
+    <string name="month">Month</string>
+    <string name="months">Months</string>
+    <string name="quarter">Quarter</string>
+    <string name="semester">Semester</string>
+    <string name="year">Year</string>
+    <string name="years">Years</string>
+
+    <string name="turns">Turns</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="cancel_turn_waiting_room_ask">Are you sure you want to delete this waiting room for this turn?</string>
+    <string name="cancel_waiting_room_ask">Are you sure you want to delete this waiting room?</string>
+    <string name="remove">Remove</string>
+    <string name="no_waiting_rooms_found">There are no waiting rooms to show.</string>
+    <string name="no_waiting_rooms">There are no waiting rooms to show. If you had active waiting rooms, check the Tickets section to confirm that your ticket was assigned.</string>
+    <string name="no_crm_offer">There are no offers to show.</string>
+    <string name="information">Information</string>
+    <string name="postal_address">Postal Address</string>
+    <string name="join_waiting_room_ask">You can join to the waiting room of this service. You will be able to see the current status and will be notified as soon as you ticket is available.</string>
+    <string name="join">Join</string>
+    <string name="until">Until</string>
+    <string name="price">Price</string>
+    <string name="price_value">Price: \$%1$s</string>
+    <string name="free">Free</string>
+    <string name="qr_scan_error">An error occurred while trying to scan the QR code.</string>
+    <string name="open_tickets">Open tickets</string>
+    <string name="edit_waiting_room">Edit waiting room</string>
+    <string name="additional_data">Additional data</string>
+    <string name="legend">Legend</string>
+    <string name="selected">Selected</string>
+    <string name="today">Today</string>
+    <string name="available">Available</string>
+    <string name="check_as_unread">Check as unread</string>
+    <string name="check_as_read">Check as read</string>
+    <string name="details">Details</string>
+    <string name="ticket_order">Ticket Order</string>
+    <string name="establishment">Establishment</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="cancel_ticket">Cancel Ticket</string>
+    <string name="confirm_ticket">Confirm ticket</string>
+    <string name="confirm_success">Confirm ticket success</string>
+    <string name="account_success">Confirm account success</string>
+    <string name="confirm_error">Confirm ticket error</string>
+    <string name="resources">Resources</string>
+    <string name="selected_days">Selected Days:</string>
+    <string name="replanning">Re planning</string>
+    <string name="repeat_interval">Repeat for interval  %1$s</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="in_range">In range of  </string>
+    <string name="repeat_to">Repeat to  %1$s</string>
+    <string name="repeat_from">Repeat from  %1$s</string>
+    <string name="for_everyone_except">For everyone except: </string>
+    <string name="everyone_except">everyone except:</string>
+    <string name="only_">only for: </string>
+    <string name="for_intervals">for intervals: </string>
+    <string name="from">from </string>
+    <string name="select_frequency">Select frequency</string>
+    <string name="to_days">To day:  %1$s</string>
+    <string name="only_for">Only for: </string>
+    <string name="error_planing">An error occurred while performing the replanning</string>
+    <string name="planing_success">Ticket rescheduled successfully</string>
+    <string name="not_rules">You have no rules planned for this service</string>
+    <string name="date">Date</string>
+    <string name="get_tickets">Get tickets</string>
+    <string name="time_left">Left</string>
+    <string name="need_confirmation">This service must be confirmed </string>
+    <string name="need_confirmation2"> hours before the date you select for your reservation. If your reservation is not confirmed, it will be cancelled. </string>
+    <string name="confirmation_true">Booking confirmed</string>
+    <string name="confirmation_false">Ticket unconfirmed</string>
+    <string name="confirm_from">Confirm from: %1$s.</string>
+    <string name="confirm_from_hour">Confirm from: %1$s hours before the reservation date.</string>
+    <string name="confirm_until">Confirm until: %1$s</string>
+    <string name="confirm_until_hour">Confirm until: %1$s hours before the reservation date.</string>
+    <string name="confirmation_date">Confirmation date: %1$s</string>
+    <string name="confirmation_payment">Confirmation of the ticket requires payment of the price established by the service provider.</string>
+
+    <string name="default_empty_prebookings">There isn\'t pre-bookings to show</string>
+    <string name="cancel_prebooking">Cancel pre-booking</string>
+    <string name="personal">Personal</string>
+    <string name="academic_training">Academic training</string>
+    <string name="academic_level">Academic level</string>
+    <string name="study_center">Study center</string>
+    <string name="study_period">Study period</string>
+    <string name="studies">Studies</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="center">Center</string>
+    <string name="place_of_birth">Place of Birth</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="profession">Profession</string>
+    <string name="see_more">See more</string>
+    <string name="more_about_me">More about me</string>
+    <string name="professional_experience">Professional experience</string>
+    <string name="skills">Abilities</string>
+    <string name="services">Services</string>
+    <string name="without_activities">Without activities</string>
+    <string name="reviews">Reviews</string>
+    <string name="service">Service</string>
+    <string name="views">Views</string>
+    <string name="locate">Locate</string>
+    <string name="description">Description</string>
+    <string name="ratings_opinions">Ratings and opinions</string>
+    <string name="associated_professional">Associated professional</string>
+    <string name="location">Location</string>
+    <string name="provider">Provider</string>
+    <string name="providers">Providers</string>
+    <string name="no_available_days">There are no days available to request a ticket. Please correct the data entered or contact the establishment of the requested service for more information.</string>
+    <string name="prebooking_success">The pre-booking has been successful. %1$d minutes is available to confirm the ticket.</string>
+    <string name="prebooking_wait_error">It has not been possible to create a prebooking for this service, because one has already been made previously. You must go to the \"Pre-bookings\" section and continue the process from there, or delete the existing prebooking.</string>
+    <string name="clean_data">Clean data</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="pick_turn">Pick Turn</string>
+    <string name="summary">Summary</string>
+    <string name="cancel_waiting_room_progress">All progress made so far will be lost. Are you sure you want to cancel the process to enter the waiting room?.</string>
+    <string name="choose_amount">What quantity would like to reserve?</string>
+    <string name="get_ticket">Get ticket</string>
+    <string name="booking_success_msg">Your ticket has been created successfully.</string>
+    <string name="notify_by_email">Notify by email</string>
+    <string name="waiting_room_created">You have entered the waiting room for this service. For more information visit the \"Waiting Room\" section. This operation may take a few minutes to reflect the changes.</string>
+    <string name="join_waiting_room_failure">Something went wrong and you could not get into the waiting room. Check that you do not currently have a waiting room for this service and try again.</string>
+    <string name="join_waiting_room_max_failure">You are already in the waiting room for this service or you have reached the maximum waiting room allowed.</string>
+    <string name="prebooking_error_msg">An error occurred while prebooking. If you already have a pre-booking for this service in the \ "Pre-bookings \" section, you must continue the process from there. Please check your connection and try again.</string>
+    <string name="version_updated">The application is updated</string>
+    <string name="version_big_change">Required update</string>
+    <string name="version_min_changes">Minor changes</string>
+    <string name="version_medium_changes">New features added</string>
+    <string name="download">Download</string>
+    <string name="no_academic_training">No academic training information available</string>
+    <string name="no_professional_experience">No professional experience information available</string>
+    <string name="no_professional_skills">No professional skills information available</string>
+    <string name="no_aditional_info">There is no information about me available</string>
+    <string name="add_more_about_me">Add more about me</string>
+    <string name="add_academic_training">Add academic training</string>
+    <string name="add_professional_experience">Add professional experience</string>
+    <string name="add_skills">Add skills</string>
+
+
+    <string name="add_cart">Add to Cart</string>
+    <string name="buy_now">Buy now</string>
+    <string name="select_model">Select Model</string>
+
+    <!-- CATEGORIES   -->
+    <string name="institution">Institution</string>
+    <string name="housing">Housing</string>
+    <string name="gastronomy">Gastronomy</string>
+    <string name="beauty">Beauty</string>
+    <string name="recreation">Recreation</string>
+    <string name="transport">Transport</string>
+    <string name="bank">Bank</string>
+    <string name="other">Other</string>
+
+    <string name="search">Search…</string>
+    <string name="recommended_services">Recommended Services</string>
+    <string name="popular_establishments">Popular Establishments</string>
+    <string name="ticket">Ticket</string>
+    <string name="not_establishments_to_show">There are not establishments to show</string>
+    <string name="not_services_to_show">There are not services to show</string>
+    <string name="not_service_detail_to_show">It was not possible to obtain the details of the selected service.</string>
+    <string name="establishments">Establishments</string>
+    <string name="favorites">Favorites</string>
+    <string name="filter">Filter</string>
+    <string name="not_filter"> - Not Filter - </string>
+    <string name="province">Province</string>
+    <string name="municipality">Municipality</string>
+    <string name="category">Category</string>
+    <string name="ratings">Ratings</string>
+    <string name="without_rating">Without rating</string>
+    <string name="currency">Currency</string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+    <string name="not_profiles_to_show">There are not profiles to show</string>
+    <string name="professional">Professional</string>
+    <string name="items_selected">items selected</string>
+    <string name="change">Change</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="pass_dont_match">Passwords don\'t match</string>
+    <string name="save">Save</string>
+    <string name="min_lenght_message">Minimum length of %d characters</string>
+    <string name="exit">Exit</string>
+    <string name="profile_verification">Profile verification</string>
+    <string name="profile_changes_detected">Changes has been detected .\nDo you want to save it?</string>
+    <string name="subCategories">Subcategories</string>
+    <string name="max_capacity_selected">Max capacity selected</string>
+    <string name="section">Section</string>
+    <string name="seats">Seats</string>
+    <string name="home_delivery">Home delivery</string>
+    <string name="column">Column</string>
+    <string name="row">Row</string>
+    <string name="full_name">Full Name</string>
+    <string name="pick_section">Pick section</string>
+    <string name="pick_seat">Pick seat</string>
+    <string name="booking_error_msg">An error occurred while trying to get the ticket. Please check your network connection and try again.</string>
+    <string name="initial_amount">Initial amount</string>
+    <string name="total_amount">Total amount</string>
+    <string name="work">Work</string>
+    <string name="offer">Offer</string>
+    <string name="canceled">Canceled</string>
+    <string name="ended">Ended</string>
+    <string name="coming">Coming</string>
+    <string name="certified">Certified</string>
+    <string name="transportations">Transportations</string>
+    <string name="conduces">Conduces</string>
+    <string name="manage_conduces">Manage Conduces</string>
+    <string name="create_edit_conduces">Create/Edit Conduces</string>
+    <string name="base_new">New</string>
+    <string name="set_route">Set route</string>
+    <string name="start">Start</string>
+    <string name="take_photo">Take photo</string>
+    <string name="pick_from_gallery">Pick from gallery</string>
+    <string name="pick">Pick</string>
+    <string name="initial">Initial</string>
+    <string name="end">End</string>
+    <string name="package_bought_success">Your package has been successfully bought</string>
+    <string name="package_bought_error">An error occurred while making the payment. Try again.</string>
+    <string name="route">Route</string>
+    <string name="markers_amount_error">You require of at least one marker on map to set a route</string>
+    <string name="quantity">Quantity</string>
+    <string name="invalid_amount">The inserted amount is invalid</string>
+    <string name="me">Me</string>
+    <string name="wrong_password">The username and password combination is not recognized.</string>
+    <string name="blocked_password">Your user is blocked for exceeding the maximum number of attempts to log in incorrectly. Renew your password to login.</string>
+    <string name="expired_password">Your password validity period has expired. An email has been sent to you with instructions to renew it.</string>
+    <string name="ignore">Ignore</string>
+    <string name="offer_accepted_message">The offer has been successfully accepted</string>
+    <string name="delivery">Delivery</string>
+    <string name="check">Check</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="purpose">Purpose</string>
+    <string name="point_of">Point of</string>
+
+    <string name="voucher">Voucher</string>
+    <string name="note">Note:</string>
+    <string name="proof_requirement">You must keep this proof and show it when you are called on the waiting list.</string>
+    <string name="number">Number</string>
+    <string name="new_reservation">New reservation</string>
+    <string name="booking_success_print_msg">Your booking for service %1$s has been created successfully. You are number %2$s on the list.</string>
+    <string name="pick_up_assignments">Pick up assignments</string>
+    <string name="confirmation_text">Are you sure of doing this operation?</string>
+    <string name="invalid_phone">Your phone is not valid</string>
+    <string name="invalid_url">Your url is not valid!</string>
+    <string name="invalid_field">Field not valid</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscription_required">Subscription Required</string>
+    <string name="subscription_message">To consume this service you need a subscription in our system. Do you want to subscribe?</string>
+    <string name="subscription_room_message">To carry out this operation you need to subscribe to our system. Do you want to subscribe?</string>
+    <string name="subscription_booking_message">To confirm this reservation, you need to register in our system. Do you want to subscribe?</string>
+
+    <!-- Validation DNI -->
+    <string name="invalid_dni">Your identity card is not valid</string>
+    <string name="dni_length_error">Your identity card must have 11 digits.</string>
+
+    <!-- Reset Password -->
+    <string name="reset_password">Reset your password</string>
+    <string name="reset_password_success">Your password has been successfully reset.</string>
+    <string name="reset_password_error">An error occurred while resetting your password.</string>
+
+    <!-- Change Email -->
+    <string name="change_email">Updating your email address</string>
+    <string name="change_email_success">Your email address has been successfully updated.</string>
+    <string name="change_email_error">An error occurred while updating your email address.</string>
+
+    <!-- Tooltip Texts -->
+    <string name="tooltip_ratings">Average rating based on user reviews.</string>
+    <string name="tooltip_availability">Maximum capacity of the service currently.</string>
+    <string name="tooltip_price">This is the price to reserve the service.</string>
+    <string name="tooltip_views">Number of people who have consulted this service.</string>
+
+    <!-- Wizard -->
+    <string name="explore_description">Find what your\'re looking for, manage your priorities and share your opinion.</string>
+    <string name="bookings_description">Get tickets remotely at the establishments of your choice, save your time.</string>
+    <string name="notifications_wizard_description">Receive notifications, information and alerts. Stay informed of what\'s going on with your tickets.</string>
+    <string name="waiting_room_description">In case there are no capacities to be attended, there is the possibility to enter a waiting room, you will be notified of the availability as soon as possible.</string>
+    <string name="pay_description">You will be able to make payments through ENZONA platform, fast an secure.</string>
+    <string name="explore">Explore</string>
+    <string name="pay">Pay</string>
+    <string name="base_name_slide_2">Tickets</string>
+    <string name="bookings">Bookings</string>
+    <string name="binding">Binding</string>
+    <string name="binding_succeed">Your account has been successfully linked.</string>
+    <string name="ez_validated_ticket_ask">Your username has been validated. Do you have a Ticket account or want to create a new one automatically?</string>
+    <string name="ticket_form_fill_in">Enter your Ticket credentials to associate your account</string>
+    <string name="ticket_user_need_sync_account">The Ticket platform is associated with a new digital identity provider %1$s. If you have an account on the %1$s platform, you can synchronize it with your Ticket account. Do you want to synchronize your account with %1$s?</string>
+    <string name="professional_name">Professional name</string>
+    <string name="support_message">The error will automatically send to us and we will solve it as soon as possible.</string>
+    <string name="email_ticket" translatable="false">ticket@xetid.cu</string>
+    <string name="crash_report">Report</string>
+    <string name="crash_report_msg">An error has previously been detected that has caused unwanted behavior within the application. Please send us the automatically generated report to continue improving.</string>
+
+    <string name="error_406_service_not_unavailable">This service is not available for this version. Please update your app.</string>
+
+    //Theme
+    <string name="theme">Theme</string>
+    <string name="theme_description">Select application theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system">System</string>
+    <string name="retry">Retry</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_required_message">Location permission is required, go to settings and turn it on</string>
+    <string name="location_error_message">An just happened getting the location, try again</string>
+    <string name="location_off_message">It seems like you have GPS off, turn it on and try again</string>
+    <string name="enzona" translatable="false">Enzona</string>
+    <string name="bill">Bill</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome_to_ticket">Welcome to Ticket</string>
+    <string name="create_drive">Create Drive</string>
+    <string name="pick_product">Pick product</string>
+    <string name="pick_measure">Pick measure</string>
+    <string name="pick_delivery">Pick delivery</string>
+    <string name="enter_quantity">Enter quantity</string>
+    <string name="create_product">Create Product</string>
+    <string name="see_product">See Product</string>
+    <string name="denomination">Denomination</string>
+    <string name="manage">Manage</string>
+    <string name="addresses">Addresses</string>
+    <string name="date_time">Date and time</string>
+    <string name="products_selected">Products selected</string>
+    <string name="certify">Certify</string>
+    <string name="work_certified_msg">Work has been successfully certified</string>
+    <string name="data_saving">Data savings</string>
+    <string name="data_saving_description">App will consume internet as little as possible</string>
+    <string name="products">Products</string>
+    <string name="pick_pick_up">Select pick up point</string>
+    <string name="no_drives_found">There are not drives</string>
+    <string name="delivery_addresses">Delivery addresses</string>
+    <string name="user_offer">User offer</string>
+    <string name="popular_services">Popular services</string>
+    <string name="new_services">New services</string>
+    <string name="must_be_number">Must be number</string>
+
+    <string name="sponsored_by">Sponsored by: %1$s</string>
+    <string name="no_ratings_to_show">There are no reviews to display.</string>
+    <string name="service_is_not_available_for_ticket">No tickets available.</string>
+    <string name="location_must_be_needed">You need to select a location on the map in the address field.</string>
+
+    <string name="date_range_label">Range of days to select</string>
+    <string name="date_range_days">days</string>
+    <string name="date_range_day">day</string>
+    <string name="date_range_days_invalid">The selected date range is not valid.</string>
+    <string name="date_range_days_invalid_lower">The date range to be selected must not be less than %1$s days</string>
+    <string name="date_range_days_invalid_higher">The date range to be selected should not be greater than %1$s days</string>
+
+    <string name="invalid_phone_number">The phone number is not valid.</string>
+    <string name="nothing_to_show">There are not nothing to show</string>
+    <string name="booking_repeat">Booking Repeat</string>
+
+
+    <string name="product_detail">Product detail</string>
+    <string name="my_cart">My Cart</string>
+
+    <string name="menu">Menu</string>
+    <string name="menu_timetable">Timetable:</string>
+    <string name="opening_time">Opening: %1$s</string>
+    <string name="closing_time">Closing: %1$s</string>
+    <string name="view_menu">View Menu</string>
+    <string name="group">Group %1$s</string>
+    <string name="no_group">No Group</string>
+    <string name="no_resource_found">We apologize, there is no menu available at this time</string>
+
+    <string name="time_not_available">Time not available</string>
+
+    <string name="confirmation_pay">To confirm your ticket, you must first pay for the service. Please press &quot;Continue&quot; to complete the payment process</string>
+
+    <string name="you_must_select_an_option_to_establish_the_rule">You must select an option to establish the rule</string>
+    <string name="shift_successfully_deleted">Shift successfully deleted</string>
+    <string name="edit_waiting_room_success">Your waiting room has been edited successfully. This operation may take a few minutes to reflect the changes</string>
+    <string name="delete_waiting_room_success">Your waiting room has been deleted successfully. This operation may take a few minutes to reflect the changes</string>
+    <string name="delete_waiting_room">You are about to eliminate this waiting room. This operation cannot be reversed. Are you sure you want to delete your waiting room?</string>
+
+    <string name="payment_method">Payment method</string>
+    <string name="payment_confirmed">The payment has been confirmed</string>
+    <string name="payment_pending">Payment is pending</string>
+    <string name="payment_cancel">The payment has been canceled</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="operation_canceled">Operation Canceled</string>
+
+    <string name="new_version">Update required</string>
+    <string name="download_latest_version">Download latest version</string>
+
+    <string name="download_wit_telegram">Download with Telegram</string>
+    <string name="download_wit_apklis">Download with Apklis</string>
+    <string name="download_wit_ticket">Download with Ticket</string>
+
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
+
+
+    <string name="users">Users</string>
+    <string name="seat_name">Seat R:%1$s C:%2$s</string>
+    <string name="reserved">Reserved</string>
+
+</resources>

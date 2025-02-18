@@ -120,7 +120,7 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
             Card(modifier = Modifier.height(200.dp)) {
                 Button(
                     onClick = { navigateTo(Route.Rick) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
                     shape = RoundedCornerShape(
                         20.dp
                     )
@@ -133,7 +133,7 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
             Card(modifier = Modifier.height(200.dp)) {
                 Button(
                     onClick = { navigateTo(Route.Contact) },
-                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
                     shape = RoundedCornerShape(
                         20.dp
                     )
@@ -146,7 +146,7 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
             Card(modifier = Modifier.height(200.dp)) {
                 Button(
                     onClick = {},
-                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
                     shape = RoundedCornerShape(
                         20.dp
                     )
@@ -157,7 +157,7 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
             Card(modifier = Modifier.height(200.dp)) {
                 Button(
                     onClick = {},
-                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
                     shape = RoundedCornerShape(
                         20.dp
                     )
@@ -166,7 +166,18 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
                 }
 
             }
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = {navigateTo(Route.Gallery)},
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Gallery")
+                }
 
+            }
         }
 
     }//End Column
