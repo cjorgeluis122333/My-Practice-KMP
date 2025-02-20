@@ -13,6 +13,8 @@
     <string name="sign_in">Sign in</string>
     <string name="password_forgotten">Have you forgotten the password?</string>
 
+    <string name="upload_new_image">Please upload new image</string>
+
     <!--Greetings-->
     <string name="greeting_morning_1">Good morning</string>
     <string name="greeting_morning_2">Good morning</string>

@@ -6,5 +6,5 @@ import org.jetbrains.compose.resources.StringResource
 data class GalleryState(
     val pictures: List<Picture> = emptyList(),
     val error: StringResource? = null,
-    val loading: Boolean = false
+    val loading: Boolean = true
 )

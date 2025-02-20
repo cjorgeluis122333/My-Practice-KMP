@@ -26,6 +26,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import cu.my.practice.kmp.core.model.picture.Picture
 import cu.my.practice.kmp.feature.gallery_database.style.ImageviewColors
+import my_practice_kmp.composeapp.generated.resources.Res
+import my_practice_kmp.composeapp.generated.resources.visibility_24dp
+import org.jetbrains.compose.resources.painterResource
 
 
 @Composable
@@ -64,7 +67,7 @@ fun SquareImageContent(
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        imageVector = Icons.Filled.Lock,
+                        painter = painterResource(Res.drawable.visibility_24dp),
                         contentDescription = null,
                         modifier = Modifier.size(17.dp),
                         tint = Color.White

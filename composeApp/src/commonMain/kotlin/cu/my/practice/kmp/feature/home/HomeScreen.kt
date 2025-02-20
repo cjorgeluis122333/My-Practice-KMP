@@ -31,6 +31,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cu.my.practice.kmp.core.ui.Route
+import cu.my.practice.kmp.feature.home.component.NavigationBarComponent
+import cu.my.practice.kmp.feature.home.model.BottomNavigationItem
+import my_practice_kmp.composeapp.generated.resources.Res
+import my_practice_kmp.composeapp.generated.resources.account_circle_24dp
+import my_practice_kmp.composeapp.generated.resources.logout_24dp
+import my_practice_kmp.composeapp.generated.resources.warning_24dp
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -65,41 +71,23 @@ fun HomeScreen(
             )
         },
         bottomBar = {
-            BottomAppBar {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ) {
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Person, contentDescription = null,
-                            modifier = Modifier
-                        )
-
-
-                    }
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Home, contentDescription = null,
-                            modifier = Modifier
-
-                        )
-                    }
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Settings, contentDescription = null,
-                            modifier = Modifier
-
-                        )
-                    }
-                }
-            }
+            NavigationBarComponent(items = listOf(
+                BottomNavigationItem(
+                    title = "Person",
+                    selectedIcon = Res.drawable.account_circle_24dp,
+                    unselectedIcon = Res.drawable.account_circle_24dp
+                ),
+                BottomNavigationItem(
+                    title = "Home",
+                    selectedIcon = Res.drawable.logout_24dp,
+                    unselectedIcon = Res.drawable.logout_24dp
+                ),
+                BottomNavigationItem(
+                    title = "Settings",
+                    selectedIcon = Res.drawable.warning_24dp,
+                    unselectedIcon = Res.drawable.warning_24dp
+                )
+            ))
         }
     ) {
 

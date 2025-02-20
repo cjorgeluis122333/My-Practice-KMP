@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface PictureDataSource {
 
-    fun selectAllPictureDec(): Flow<List<Picture>>
+   suspend fun selectAllPictureDec(): List<Picture>
 
     suspend fun insertPicture(picture: Picture)
 

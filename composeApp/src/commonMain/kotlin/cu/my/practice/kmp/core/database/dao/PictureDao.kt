@@ -6,13 +6,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import cu.my.practice.kmp.core.database.entity.PictureEntity
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PictureDao {
 
     @Query("Select * from pictures order by id desc")
-    fun selectAllPicture(): Flow<List<PictureEntity>>
+    suspend fun selectAllPicture(): List<PictureEntity>
 
     @Insert(entity = PictureEntity::class, onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertPicture(pictureEntity: PictureEntity)

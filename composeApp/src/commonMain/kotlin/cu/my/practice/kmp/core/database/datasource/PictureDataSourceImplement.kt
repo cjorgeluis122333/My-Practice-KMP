@@ -9,8 +9,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class PictureDataSourceImplement(private val pictureDao: PictureDao) : PictureDataSource {
-    override fun selectAllPictureDec(): Flow<List<Picture>> =
-        pictureDao.selectAllPicture().map { picture -> picture.map { it.toModel() } }
+
+    override suspend fun selectAllPictureDec(): List<Picture> =
+        pictureDao.selectAllPicture().map { picture -> picture.toModel() }
 
 
     override suspend fun insertPicture(picture: Picture) {

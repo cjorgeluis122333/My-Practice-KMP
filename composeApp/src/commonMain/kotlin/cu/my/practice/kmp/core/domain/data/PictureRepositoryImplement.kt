@@ -13,10 +13,9 @@ class PictureRepositoryImplement(
     private val pictureDataSource: PictureDataSource
 ) : PictureRepository {
 
-    override fun selectAllPictureDec(): Flow<List<Picture>> =
-        pictureDataSource.selectAllPictureDec().flowOn(dispatcher.ioDispatcher)
-
-
+    override suspend fun selectAllPictureDec(): List<Picture> = withContext(dispatcher.ioDispatcher){
+        pictureDataSource.selectAllPictureDec()
+    }
     override suspend fun insertPicture(picture: Picture) =
         withContext(dispatcher.ioDispatcher) {
             pictureDataSource.insertPicture(picture)

@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
@@ -50,29 +51,31 @@ import cu.my.practice.kmp.feature.gallery_database.state.GalleryEventState
 import cu.my.practice.kmp.feature.gallery_database.style.ImageviewColors
 import cu.my.practice.kmp.feature.gallery_database.util.animatePageChanges
 import kotlinx.coroutines.launch
+import my_practice_kmp.composeapp.generated.resources.Res
+import my_practice_kmp.composeapp.generated.resources.upload_new_image
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modifier = Modifier) {
 
     //All pictures save in database
-    val getAllPicture by viewModel.allPicture.collectAsStateWithLifecycle()
+    val state by viewModel.state.collectAsStateWithLifecycle()
     //The image you show
     val pictures: SnapshotStateList<Picture> = remember { mutableStateListOf() }
     //Have the control of the pictures: the current page, quantity pages, exc
     val pagerState = rememberPagerState(pageCount = { pictures.size })
     val viewScope = rememberCoroutineScope()
-
-    LaunchedEffect(getAllPicture) {
-        if (getAllPicture.isNotEmpty()) {
-            pictures.clear()
-            pictures += getAllPicture
+    //Get initial pictures
+    LaunchedEffect(state.pictures) {
+        if (state.pictures.isNotEmpty()) {
+            pictures += state.pictures
         }
     }
 
 
     val galleryManager: GalleryManager = rememberGalleryManager { file ->
-        //pictures.add(0, Picture(file?.toImageBitmap()))
+        pictures.add(0, Picture(file?.toImageBitmap()))
         viewModel.onEvent(GalleryEventState.OnInsert(Picture(file?.toImageBitmap()))) //Insert image in database
         viewScope.launch {
             pagerState.scrollToPage(0)
@@ -92,36 +95,10 @@ fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modif
         }
     }
 
+    // ======================================== Main Picture
     Column(modifier = modifier.background(MaterialTheme.colorScheme.background)) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(393.dp)
-                .background(Color.Black),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(modifier = Modifier.fillMaxSize()) {
-                HorizontalPager(state = pagerState) { index ->
-                    val picture = pictures[index]
-                    var image: ImageBitmap? by remember(picture) { mutableStateOf(null) }
-                    LaunchedEffect(picture) { image = picture.imageBitmap }
-                    image?.let {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .animatePageChanges(pagerState, index)
-                        ) {
-                            Image(
-                                bitmap = it,
-                                contentDescription = null,
-                                modifier = Modifier.fillMaxSize(),
-                                contentScale = ContentScale.Crop
-                            )
-                        }
-                    }
-                }
-            }
-        }
+
+        MainPicture(pagerState = pagerState, pictures = pictures, modifier = modifier)
 
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -129,7 +106,7 @@ fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modif
         ) {
             if (pictures.isEmpty()) {
                 Text(
-                    text = "Please upload new image",
+                    text = stringResource(Res.string.upload_new_image),
                     style = MaterialTheme.typography.bodySmall,
                     modifier = Modifier.align(Alignment.Center)
                 )
@@ -158,6 +135,43 @@ fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modif
             )
         }
     }
+}
+
+@Composable
+fun MainPicture(pagerState: PagerState, pictures: List<Picture>, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(393.dp)
+            .background(Color.Black),
+        contentAlignment = Alignment.Center
+    ) {
+        Box(modifier = modifier.fillMaxSize()) {
+            HorizontalPager(state = pagerState) { index ->
+                val picture = pictures[index]
+                var image: ImageBitmap? by remember(picture) { mutableStateOf(null) }
+
+                LaunchedEffect(picture) { image = picture.imageBitmap }
+
+                image?.let {
+                    Box(
+                        modifier = modifier
+                            .fillMaxSize()
+                            .animatePageChanges(pagerState, index)
+                    ) {
+                        Image(
+                            bitmap = it,
+                            contentDescription = null,
+                            modifier = Modifier.fillMaxSize(),
+                            contentScale = ContentScale.Crop
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 @Composable
