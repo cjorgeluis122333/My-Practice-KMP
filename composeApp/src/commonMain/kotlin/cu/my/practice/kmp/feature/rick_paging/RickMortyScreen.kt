@@ -43,8 +43,10 @@ fun RickContent(getCharacters: LazyPagingItems<CharacterDataModel>) {
             getCharacters.loadState.refresh is LoadState.Loading && getCharacters.itemCount == 0 -> {
                 item {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+
                         CircularProgressIndicator(
-                            modifier = Modifier.size(64.dp), color = Color.White
+                            modifier = Modifier.size(64.dp),
+                            color = Color.White
                         )
                     }
                 }
@@ -53,13 +55,13 @@ fun RickContent(getCharacters: LazyPagingItems<CharacterDataModel>) {
             //Estado vacio
             getCharacters.loadState.refresh is LoadState.NotLoading && getCharacters.itemCount == 0 -> {
                 item {
-
                     Text(text = "Todavía no hay personajes")
                 }
             }
 
             getCharacters.loadState.hasError -> {
                 item {
+
                     Box(
                         Modifier
                             .fillMaxSize()

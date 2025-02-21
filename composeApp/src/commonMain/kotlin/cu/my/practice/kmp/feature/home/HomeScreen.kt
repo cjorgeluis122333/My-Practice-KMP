@@ -1,22 +1,15 @@
 package cu.my.practice.kmp.feature.home
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Home
-import androidx.compose.material.icons.rounded.Person
-import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.sharp.Info
 import androidx.compose.material.icons.sharp.Menu
 import androidx.compose.material.icons.sharp.Refresh
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -35,8 +28,8 @@ import cu.my.practice.kmp.feature.home.component.NavigationBarComponent
 import cu.my.practice.kmp.feature.home.model.BottomNavigationItem
 import my_practice_kmp.composeapp.generated.resources.Res
 import my_practice_kmp.composeapp.generated.resources.account_circle_24dp
-import my_practice_kmp.composeapp.generated.resources.logout_24dp
-import my_practice_kmp.composeapp.generated.resources.warning_24dp
+import my_practice_kmp.composeapp.generated.resources.chat_24dp
+import my_practice_kmp.composeapp.generated.resources.home_24dp
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -71,23 +64,28 @@ fun HomeScreen(
             )
         },
         bottomBar = {
-            NavigationBarComponent(items = listOf(
-                BottomNavigationItem(
-                    title = "Person",
-                    selectedIcon = Res.drawable.account_circle_24dp,
-                    unselectedIcon = Res.drawable.account_circle_24dp
-                ),
-                BottomNavigationItem(
-                    title = "Home",
-                    selectedIcon = Res.drawable.logout_24dp,
-                    unselectedIcon = Res.drawable.logout_24dp
-                ),
-                BottomNavigationItem(
-                    title = "Settings",
-                    selectedIcon = Res.drawable.warning_24dp,
-                    unselectedIcon = Res.drawable.warning_24dp
+            NavigationBarComponent(
+                items = listOf(
+                    BottomNavigationItem(
+                        title = "Person",
+                        selectedIcon = Res.drawable.account_circle_24dp,
+                        unselectedIcon = Res.drawable.account_circle_24dp,
+                        hasNews = true
+                    ),
+                    BottomNavigationItem(
+                        title = "Home",
+                        selectedIcon = Res.drawable.home_24dp,
+                        unselectedIcon = Res.drawable.home_24dp
+                    ),
+                    BottomNavigationItem(
+                        title = "Settings",
+                        selectedIcon = Res.drawable.chat_24dp,
+                        unselectedIcon = Res.drawable.chat_24dp,
+                        hasNews = true,
+                        badgeCount = 4
+                    )
                 )
-            ))
+            )
         }
     ) {
 
@@ -156,7 +154,7 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
             }
             Card(modifier = Modifier.height(200.dp)) {
                 Button(
-                    onClick = {navigateTo(Route.Gallery)},
+                    onClick = { navigateTo(Route.Gallery) },
                     modifier = Modifier.fillMaxSize().padding(8.dp),
                     shape = RoundedCornerShape(
                         20.dp

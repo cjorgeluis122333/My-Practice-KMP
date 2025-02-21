@@ -32,6 +32,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import cu.my.practice.kmp.core.ui.component.ShimmerPictureAntTowText
 import cu.my.practice.kmp.exercite.nowInAndroid.day2.saySafeOreUnSafe
 import cu.my.practice.kmp.shared.App
 
@@ -46,114 +47,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
-fun ShowHome() {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                navigationIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Sharp.Menu, contentDescription = null)
-                    }
-                },
-                title = { Text("Home") },
-                actions = {
-
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Sharp.Refresh, contentDescription = null)
-                    }
-                    IconButton(onClick = {}) {
-                        Icon(imageVector = Icons.Sharp.Info, contentDescription = null)
-                    }
-
-                }
-            )
-        },
-        bottomBar = {
-            BottomAppBar {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ) {
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Person, contentDescription = null,
-                            modifier = Modifier
-                        )
-
-
-                    }
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Home, contentDescription = null,
-                            modifier = Modifier
-
-                        )
-                    }
-                    IconButton(
-                        onClick = {},
-                    ) {
-                        Icon(
-                            imageVector = Icons.Rounded.Settings, contentDescription = null,
-                            modifier = Modifier
-
-                        )
-                    }
-                }
-            }
-        }
-    ) {
-
-
-        Context(it)
-    }
-}
-
-@Composable
-fun Context(paddingValues: PaddingValues) {
-    Column(
-        modifier = Modifier
-            .padding(paddingValues)
-            .fillMaxSize()
-    ) {
-        Card(modifier = Modifier.height(200.dp)) {
-              Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
-                  20.dp
-              )) {
-                  Text(text = "Paging 3")
-              }
-
-        }
-
-        Card(modifier = Modifier.height(200.dp)) {
-            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
-                20.dp
-            )) {
-                Text(text = "Room Database")
-            }
-
-        }
-
-        Card(modifier = Modifier.height(200.dp)) {
-            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
-                20.dp
-            )) {
-                Text(text = "Ktor Network")
-            }
-        }
-        Card(modifier = Modifier.height(200.dp)) {
-            Button(onClick = {}, modifier = Modifier.fillMaxWidth().padding(8.dp), shape = RoundedCornerShape(
-                20.dp
-            )) {
-                Text(text = "Datastore")
-            }
-
-        }
-    }
+fun ShowShimmer() {
+    ShimmerPictureAntTowText()
 }
