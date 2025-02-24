@@ -1,5 +1,6 @@
 package cu.my.practice.kmp.feature.gallery_database
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.AnimationConstants
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -98,6 +99,10 @@ fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modif
     // ======================================== Main Picture
     Column(modifier = modifier.background(MaterialTheme.colorScheme.background)) {
 
+        AnimatedVisibility(state.loading) {
+            GallerySplashScreen()
+        }
+
         MainPicture(pagerState = pagerState, pictures = pictures, modifier = modifier)
 
         Box(
@@ -135,6 +140,7 @@ fun GalleryScreen(viewModel: GalleryViewModel = koinViewModel(), modifier: Modif
             )
         }
     }
+
 }
 
 @Composable

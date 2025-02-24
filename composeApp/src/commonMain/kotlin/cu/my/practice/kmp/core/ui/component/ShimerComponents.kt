@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,37 +25,37 @@ fun ShimmerPictureAntTowText(
     quantity: Int = 7,
     imageSize: Int = 64
 ) {
+    for (i in 0..quantity) {
+        Spacer(modifier.height(16.dp))
+        Row(
+            modifier = modifier.fillMaxWidth().height(100.dp)
+                .clip(shape = RoundedCornerShape(20.dp)).shimmer(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
 
-    LazyColumn {
+        ) {
 
-        items(quantity) {
-            Spacer(modifier.height(16.dp))
-            Row(
-                modifier = modifier.fillMaxWidth().height(100.dp)
-                    .clip(shape = RoundedCornerShape(20.dp)).shimmer(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
+            Spacer(modifier.weight(0.05f))
+            Box(
+                modifier = modifier.size(imageSize.dp).clip(
+                    shape = RoundedCornerShape(imageSize.dp)
+                ).background(Color.Gray)
+            )
+            Spacer(modifier.weight(0.1f))
 
-            ) {
-
-                Spacer(modifier.weight(0.05f))
+            Column(modifier.weight(0.8f)) {
+                Box(modifier.fillMaxWidth().height(24.dp).background(Color.Gray))
+                Spacer(modifier.height(12.dp))
                 Box(
-                    modifier = modifier.size(imageSize.dp).clip(
-                        shape = RoundedCornerShape(imageSize.dp)
-                    ).background(Color.Gray)
+                    modifier.fillMaxWidth().height(24.dp).padding(end = 16.dp)
+                        .background(Color.Gray)
                 )
-                Spacer(modifier.weight(0.1f))
-
-                Column(modifier.weight(0.8f)) {
-                    Box(modifier.fillMaxWidth().height(24.dp).background(Color.Gray))
-                    Spacer(modifier.height(12.dp))
-                    Box(modifier.fillMaxWidth().height(24.dp).padding(end = 16.dp).background(Color.Gray))
-                }
-
-                Spacer(modifier.weight(0.05f))
-
             }
+
+            Spacer(modifier.weight(0.05f))
+
         }
     }
+
 
 }

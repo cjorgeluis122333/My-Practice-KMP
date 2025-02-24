@@ -53,9 +53,7 @@ class GalleryViewModel(
     private fun loadPictures() {
         viewModelScope.launch {
             stateHandler(isLoading = true)
-            delay(2000L)
             stateHandler(pictures = selectPictureUsesCase())
-
             stateHandler(isLoading = false)
         }
 
