@@ -1,4 +1,5 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -16,6 +17,7 @@ plugins {
 
 kotlin {
     androidTarget {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
@@ -62,8 +64,13 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             //Coil
             implementation(libs.bundles.coil)
+            //Shimmer
             implementation(libs.compose.shimmer)
+            //Toast
+            implementation(libs.alert.kmp)  //No es la gran cosa
+            implementation(libs.button.bar.kmp) //No es la gran cosa
 
+            implementation(libs.charts)
 
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
