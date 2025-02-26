@@ -8,6 +8,7 @@ import cu.my.practice.kmp.core.network.di.networkModule
 import cu.my.practice.kmp.feature.admin.AdminViewModel
 import cu.my.practice.kmp.feature.contact_database.ContactViewModel
 import cu.my.practice.kmp.feature.gallery_database.GalleryViewModel
+import cu.my.practice.kmp.feature.graph.screen.ChartsViewModel
 import cu.my.practice.kmp.feature.home.HomeViewModel
 import cu.my.practice.kmp.feature.login.LoginViewModel
 import cu.my.practice.kmp.feature.register.RegisterViewModel
@@ -15,7 +16,6 @@ import cu.my.practice.kmp.feature.rick_paging.RickMortyViewModel
 import cu.my.practice.kmp.feature.splash.SplashViewModel
 import cu.my.practice.kmp.shared.AppViewModel
 import org.koin.core.context.startKoin
-import org.koin.core.module.dsl.viewModel
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
@@ -33,6 +33,7 @@ val sharedModule = module {
     viewModelOf(::ContactViewModel)
     viewModelOf(::RickMortyViewModel)
     viewModelOf(::GalleryViewModel)
+    viewModelOf(::ChartsViewModel)
 }
 
 

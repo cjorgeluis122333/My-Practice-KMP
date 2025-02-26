@@ -31,6 +31,7 @@ import cu.my.practice.kmp.feature.contact_database.ContactScreen
 import cu.my.practice.kmp.feature.contact_database.ContactViewModel
 import cu.my.practice.kmp.feature.gallery_database.GalleryScreen
 import cu.my.practice.kmp.feature.gallery_database.GalleryViewModel
+import cu.my.practice.kmp.feature.graph.screen.ChartsScreen
 import cu.my.practice.kmp.feature.home.HomeScreen
 import cu.my.practice.kmp.feature.home.HomeViewModel
 import cu.my.practice.kmp.feature.login.LoginScreen
@@ -154,6 +155,13 @@ fun App() {
                         enterTransition = { slideInHorizontally() }) {
                         val galleryViewModel = koinViewModel<GalleryViewModel>()
                         GalleryScreen(viewModel = galleryViewModel)
+                    }
+                    composable<Route.Charts>(
+                        exitTransition = { slideOutHorizontally() },
+                        enterTransition = { slideInHorizontally() }) {
+
+                        ChartsScreen()
+
                     }
 
 

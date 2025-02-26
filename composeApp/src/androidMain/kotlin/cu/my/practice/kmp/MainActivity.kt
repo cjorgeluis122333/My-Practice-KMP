@@ -6,8 +6,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import cu.my.practice.kmp.core.ui.component.ShimmerPictureAntTowText
 import cu.my.practice.kmp.exercite.nowInAndroid.day2.saySafeOreUnSafe
+import cu.my.practice.kmp.feature.graph.AddCustomBarChart
+import cu.my.practice.kmp.feature.graph.AddDefaultMultiLineChart
 import cu.my.practice.kmp.shared.App
 
 class MainActivity : ComponentActivity() {
@@ -22,6 +23,17 @@ class MainActivity : ComponentActivity() {
 
 @Preview
 @Composable
-fun ShowShimmer() {
+fun StackedBarDefaultPreview() {
+}
 
+@Preview
+@Composable
+fun AddCustomBarChartPreview(){
+    AddCustomBarChart()
+}
+
+@Preview
+@Composable
+fun MultiLinealPreview(){
+    AddDefaultMultiLineChart()
 }

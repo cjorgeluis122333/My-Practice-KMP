@@ -30,4 +30,8 @@ sealed interface Route {
 
     @Serializable
     data object Gallery : Route
+
+    @Serializable
+    data object Charts : Route
+
 }

@@ -164,6 +164,19 @@ fun HomeContent(paddingValues: PaddingValues, navigateTo: (Route) -> Unit) {
                 }
 
             }
+
+            Card(modifier = Modifier.height(200.dp)) {
+                Button(
+                    onClick = { navigateTo(Route.Charts) },
+                    modifier = Modifier.fillMaxSize().padding(8.dp),
+                    shape = RoundedCornerShape(
+                        20.dp
+                    )
+                ) {
+                    Text(text = "Charts")
+                }
+
+            }
         }
 
     }//End Column
